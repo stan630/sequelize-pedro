@@ -1,1 +1,1 @@
-Upload to MySQL database useing react, vite, and sequelize
+Upload to MySQL database using react, vite, and sequelize
