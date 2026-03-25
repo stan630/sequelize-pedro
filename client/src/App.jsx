@@ -1,32 +1,21 @@
-import axios from 'axios'
-import { useEffect, useState } from 'react'
 import './App.css'
+import Home from './pages/Home'
+import AddStudent from './pages/AddStudent'
+import { BrowserRouter as Router, Routes, Route,Link} from 'react-router-dom'
 
 function App() {
-  const [studentData,setStudentData] = useState([])
   
-   useEffect(()=>{
-   axios.get("http://localhost:8088/student").then((response)=>{
-      setStudentData(response.data)
-   })
-  }, [])
-
-  return (
-    <div className='App'> 
-      {studentData.map((student,key) => {
-         return (
-            <div className='studentInfo'>
-               <div>{student.fname}</div>
-               <div>{student.lname}</div>
-               <div>{student.email}</div>
-               <div>{student.major}</div>
-               <div>{student.dorm}</div>
-               
-            </div>
-         )
-      })}
-      </div>
-    
+   return (
+    <div className='App'>
+      <Router>
+         <Link to="/">Home Page</Link>
+         <Link to="/addstudent"> Add a Student</Link>
+         <Routes>
+            <Route path="/" exact element={<Home />} />
+            <Route path="/addstudent" element={<AddStudent />} />
+         </Routes>
+      </Router>
+    </div>
    )
 }
 

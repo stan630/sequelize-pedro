@@ -1,14 +1,59 @@
-.App {
-  width: 100vw;
-  height: auto;
-   display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding-top: 40px;
-}
 
 body {
    margin: 0;
    padding: 0;
 }
+
+.title {
+   color: rgb(165, 28, 48);
+   font-family:Georgia, 'Times New Roman', Times, serif;
+   text-align: center;
+   
+}
+
+table {
+   font-family:Arial, Helvetica, sans-serif;
+   border-collapse: collapse; 
+   width: 100%;
+}
+
+td,th {
+   border: 1px solid #ddd;
+   padding: .5rem;
+   text-align: left;
+}
+th {
+   background-color: rgb(165,28,48);
+   color:azure
+}
+
+.createAddStudentPage {
+   font-family: Arial, Helvetica, sans-serif;
+   width: 100vw;
+   height: 70vh;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.formContainer {
+   display: flex;
+   flex-direction: column;
+  justify-content: center;
+  width: 250px;
+  height: auto;
+  padding: 20p;
+  border: 5px solide rgb(165, 28, 48);
+  border-radius: 5px;
+}
+
+.formContainer #input{
+   height: 40px;
+   margin-top: 10px;
+   margin-bottom: 10px;
+   border:  2px solid grey;
+   padding-left: 10px;
+   font-size: 20px;
+}
+
 
