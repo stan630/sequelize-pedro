@@ -12,10 +12,11 @@ function Home() {
   }, []);
 
   return (
-    <div>
-      <h2 className="title">Harvard Students</h2>
-      <table>
-        <thead>
+    <div className="bg-gray-100 min-h-screen">
+      
+      <h2 className="text-crimson text-2xl font-bold mb-4">Harvard Students</h2>
+      <table className="table-auto">
+        <thead className="bg-crimson text-gray-100">
           <tr>
             <th>First Name</th>
             <th>Last Name</th>

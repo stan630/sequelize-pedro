@@ -1,22 +1,22 @@
-import './App.css'
-import Home from './pages/Home'
-import AddStudent from './pages/AddStudent'
-import { BrowserRouter as Router, Routes, Route,Link} from 'react-router-dom'
+// import './App.css'
+import Home from "./pages/Home";
+import AddStudent from "./pages/AddStudent";
+import { Routes, Route } from "react-router-dom";
+import Navbar from "./Navbar";
+import Registration from "./pages/Registration";
 
 function App() {
-  
-   return (
-    <div className='App'>
-      <Router>
-         <Link to="/">Home Page</Link>
-         <Link to="/addstudent"> Add a Student</Link>
-         <Routes>
-            <Route path="/" exact element={<Home />} />
-            <Route path="/addstudent" element={<AddStudent />} />
-         </Routes>
-      </Router>
-    </div>
-   )
+  return (
+   <>
+      <Navbar />
+      <Routes>
+         <Route path="/" element={<Home />} />
+         <Route path="/addstudent" element={<AddStudent />} />
+         <Route path="/register" element={<Registration />} />
+      </Routes>
+   </>
+   
+   );
 }
 
-export default App
+export default App;
