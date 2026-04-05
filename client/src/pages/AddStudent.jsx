@@ -2,12 +2,17 @@ import React from "react";
 import { useFormik } from "formik";
 import { basicSchema } from "../schemas";
 
-const onSubmit = () => {
-   console.log("submitted")
+const onSubmit = async(values, actions) => {
+   console.log(values)
+   console.log(actions)
+   await new Promise((resolve)=>{
+      setTimeout(resolve, 1000)
+      actions.resetForm()
+   })
 }
 
 function AddStudent() {
-  const {values,errors, handleBlur, handleChange, handleSubmit} = useFormik({
+  const {values,errors, handleBlur,isSubmitting, handleChange, handleSubmit} = useFormik({
    initialValues: {
       fname: "",
       lname: "",
@@ -29,6 +34,7 @@ function AddStudent() {
             onBlur={handleBlur}
             onChange={handleChange}
             />
+            {errors.fname && <p className="error">{errors.fname}</p>}
           </div>
           <div className="mb-5">
             <label htmlFor="lname">Last Name</label>
@@ -60,6 +66,7 @@ function AddStudent() {
           </div>
 
           <button
+            disabled={isSubmitting}
             type="submit"
             className="bg-blue-500 px-2 disabled:bg-gray-500 py-2 rounded"
           >
