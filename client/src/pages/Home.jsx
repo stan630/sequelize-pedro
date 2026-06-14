@@ -29,7 +29,7 @@ function Home() {
         {studentData.map((student, key) => {
           return (
             <tbody>
-              <tr key={key} className="text-center">
+              <tr key={key} className="text-left">
                 <td>{student.fname}</td>
                 <td>{student.lname}</td>
                 <td>{student.email}</td>
