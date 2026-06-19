@@ -108,7 +108,7 @@ const validationSchema = Yup.object({
           <option value="Quincy">Quincy</option>
           <option value="Longfellow">Longfellow</option>
           <option value="Lowell">Lowell</option>
-          <option value="winthrop">Winthrop</option>
+          <option value="Winthrop">Winthrop</option>
         </Field>
         <ErrorMessage name="dorm" />
 

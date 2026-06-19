@@ -12,11 +12,11 @@ function Home() {
   }, []);
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-gray-100 min-h-screen mx-auto p-8">
       
-      <h2 className="text-crimson text-2xl font-bold mb-4">Harvard Students</h2>
+      <h2 className="text-crimson text-2xl text-center font-bold mb-4">Harvard Students</h2>
       <table className=" table-auto w-full">
-        <thead className="bg-crimson text-gray-100">
+        <thead className="bg-crimson text-gray-100 text-left">
           <tr>
             <th>First Name</th>
             <th>Last Name</th>
